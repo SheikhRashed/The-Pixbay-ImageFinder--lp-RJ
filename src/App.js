@@ -1,12 +1,13 @@
 import React from "react"
 import Header from "./Components/Header/Header";
 import "bootstrap/dist/css/bootstrap.min.css"
-import Dialogue from "./Components/Dialogue/Dialogue";
+import ImageLists from "./Components/ImageLists/ImageLists";
 function App() {
   return (
     <>
       <Header />
-      <Dialogue />
+
+      <ImageLists />
     </>
   );
 }
