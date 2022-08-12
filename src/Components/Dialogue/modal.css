@@ -1,0 +1,15 @@
+
+.dialogue .modal-header { 
+  padding: 9px 12px ;
+}
+.dialogue .modal-body { 
+  padding: 0px;
+  width: 100%;
+  height: 640px;
+  overflow: hidden;
+}
+.dialogue .modal-body img { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

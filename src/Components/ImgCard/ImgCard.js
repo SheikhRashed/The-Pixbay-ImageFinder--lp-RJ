@@ -1,25 +1,32 @@
-import React from "react"
+import React, { useState } from "react"
 import "./ImgCard.css"
+import Dialogue from "../Dialogue/Dialogue"
 import { MdOutlineZoomOutMap } from "react-icons/md"
-export default function ImgCard() {
+
+export default function ImgCard({ picture }) {
+  const [show, setShow] = useState(false)
+  const previewHandler = () => setShow(!show)
+
 
   return (
-    <div className="card bg-white">
-      <div className="card-img">
+    <>
+      <Dialogue largeImage={picture.largeImageURL} show={show} modalHandler={previewHandler} />
+      <div className="card bg-white">
+        <div className="card-img">
+          <img src={picture.webformatURL} alt="..." />
 
-        <img src="https://images.unsplash.com/photo-1659976440475-5d6e1f43ddf7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="..." />
-
-        <div className="card-zoom">
-          <button>
-            <MdOutlineZoomOutMap />
-          </button>
+          <div className="card-zoom">
+            <button onClick={previewHandler}>
+              <MdOutlineZoomOutMap />
+            </button>
+          </div>
+        </div>
+        <div className="card-body">
+          <h5 className="card-title">{picture.user}</h5>
+          <p className="card-text">{picture.tags}</p>
         </div>
       </div>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
+    </>
 
   )
 }
