@@ -2,13 +2,12 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 
 import ImageCard from "../ImgCard/ImgCard"
-import styles from "./ImageLists.module.css"
 
 export default function ImageLists({ pictureList }) {
 
   return (
     <>
-      <div className={`py-5 ${styles.imageResult}`}>
+      <div className="py-5 my-4">
         <Container>
           <Row>
             {

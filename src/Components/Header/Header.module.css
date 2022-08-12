@@ -1,4 +1,6 @@
 
+
+
 .searchImage { 
   display: flex;
   align-items: center;                
@@ -24,4 +26,19 @@
 .selectValue { 
   width: 80px !important;
   border-left: 1px solid #ddd !important;
+}
+
+
+/* Media Queries  */
+@media (max-width: 767px) { 
+  .searchImage { 
+    width: 100%;
+  }
+  .logo { 
+    display: none;
+  }
+
+  .searchField { 
+    width: 100% !important;
+  }
 }

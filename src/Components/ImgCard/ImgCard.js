@@ -1,12 +1,13 @@
 import React, { useState } from "react"
-import "./ImgCard.css"
 import Dialogue from "../Dialogue/Dialogue"
 import { MdOutlineZoomOutMap } from "react-icons/md"
 
+import "./ImgCard.css"
+
 export default function ImgCard({ picture }) {
+
   const [show, setShow] = useState(false)
   const previewHandler = () => setShow(!show)
-
 
   return (
     <>
@@ -14,7 +15,6 @@ export default function ImgCard({ picture }) {
       <div className="card bg-white">
         <div className="card-img">
           <img src={picture.webformatURL} alt="..." />
-
           <div className="card-zoom">
             <button onClick={previewHandler}>
               <MdOutlineZoomOutMap />
